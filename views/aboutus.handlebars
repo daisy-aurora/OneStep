@@ -1,0 +1,458 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>About Fetch</title>
+		<meta name="title" content="jQuery One Page Scroll by Pete R. | The Pete Design" />
+		<meta name="description" content="Create an Apple-like one page scroller website (iPhone 5S website) with One Page Scroll plugin" />
+		<link rel="image_src" href="/images/notify_better_image.png" />
+		<meta name="description" content="top menu &amp; navigation" />
+		
+		<!-- ACE TEMPLATE -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	
+		<!-- bootstrap & fontawesome -->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/font-awesome/4.2.0/css/font-awesome.min.css" />
+	
+		<!-- page specific plugin styles -->
+	
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<!-- text fonts -->
+		<link rel="stylesheet" href="assets/fonts/fonts.googleapis.com.css" />
+		<link rel="stylesheet" href="assets/fonts/foundation-icons/foundation-icons.css" />
+	
+		<!-- ace styles -->
+		<link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+		
+		<!-- one step donor search tool specific css -->
+		<link rel="stylesheet" href="assets/css/style.css" />
+	
+		<!--[if lte IE 9]>
+			<link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+		<![endif]-->
+	
+		<!--[if lte IE 9]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+	
+		<!-- inline styles related to this page -->
+	
+		<!-- ace settings handler -->
+		<script src="assets/js/ace-extra.min.js"></script>
+	
+		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+	
+		<!--[if lte IE 8]>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+		
+		
+		<!-- ONE PAGINATION -->
+		<meta content="http://www.thepetedesign.com/demos/onepage_scroll_demo.html" property="og:url" />
+		<meta content="http://www.thepetedesign.com/images/onepage_scroll_image.png" property="og:image" />
+		<link rel="shortcut icon" id="favicon" href="favicon.png"> 
+		<link rel="canonical" href="http://www.thepetedesign.com/demos/onepage_scroll_demo.html" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Pacifico:400' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		  <script type="text/javascript" src="assets/js/jquery.onepage-scroll.js"></script>
+		  <link href='assets/css/onepage-scroll.css' rel='stylesheet' type='text/css'>
+		  <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		  <style>
+		    html {
+		      height: 100%;
+		    }
+		    body {
+		      background: #E2E4E7;
+		      padding: 0;
+		      text-align: center;
+		      font-family: 'open sans';
+		      position: relative;
+		      margin: 0;
+		      height: 100%;
+		      -webkit-font-smoothing: antialiased;
+		    }
+		    
+		    .wrapper {
+		    	height: 100% !important;
+		    	height: 100%;
+		    	margin: 0 auto; 
+		    	overflow: hidden;
+		    }
+		    
+		    a {
+		      text-decoration: none;
+		    }
+		    
+		    .pointer {
+		      color: #9b59b6;
+		      font-family: 'Pacifico', cursive;
+		      font-size: 30px;
+		      margin-top: 15px;
+		    }
+		    code {
+		      margin: 20px 1%;
+		      float: left;
+		      width: 48%;
+		      height: 105px;
+		      background: rgba(0,0,0,0.1);
+		      border: rgba(0,0,0,0.05) 5px solid;
+		      border-radius: 5px;
+		      padding:5px;
+		      color: white;
+		      text-align: center;
+		      font-size: 15px;
+		      margin-top: 25px;
+		      display: block;
+		      box-sizing: border-box;
+		      -webkit-box-sizing: border-box;
+		      -moz-box-sizing: border-box;
+		    }
+		    code.html {
+		      color: #7EC9E6;
+		    }
+		    code.js {
+		      color: #FFAD00;
+		    }
+		
+		    .main {
+		      float: left;
+		      width: 100%;
+		      margin: 0 auto;
+		    }
+		   
+		    .main h1.demo1 {
+		      background: #1ABC9C;
+		    }
+		    
+		    .reload.bell {
+		      font-size: 12px;
+		      padding: 20px;
+		      width: 45px;
+		      text-align: center;
+		      height: 47px;
+		      border-radius: 50px;
+		      -webkit-border-radius: 50px;
+		      -moz-border-radius: 50px;
+		    }
+		    
+		    .reload.bell #notification {
+		      font-size: 25px;
+		      line-height: 140%;
+		    }
+		    
+		    .reload, .btn{
+		      display: inline-block;
+		      border: 4px solid #A2261E;
+		      border-radius: 5px;
+		      -moz-border-radius: 5px;
+		      -webkit-border-radius: 5px;
+		      background: #CC3126;
+		      display: inline-block;
+		      line-height: 100%;
+		      padding: 0.7em;
+		      text-decoration: none;
+		      color: #fff;
+		      width: 100px;
+		      line-height: 140%;
+		      font-size: 17px;
+		      font-family: open sans;
+		      font-weight: bold;
+		    }
+		    .reload:hover{
+		      background: #444;
+		    }
+		    .btn {
+		      width: 200px;
+		      color: rgb(255, 255, 255);
+		      border: 4px solid rgb(0, 0, 0);
+		      background: rgba(3, 3, 3, 0.75);
+		    }
+		    .clear {
+		      width: auto;
+		    }
+		    .btn:hover, .btn:hover {
+		      background: #444;
+		    }
+		    .btns {
+		      width: 410px;
+		      margin: 50px auto;
+		    }
+		    .credit {
+		      text-align: center;
+		      color: rgba(0,0,0,0.5);
+		      padding: 10px;
+		      width: 410px;
+		      clear: both;
+		    }
+		    .credit a {
+		      color: rgba(0,0,0,0.85);
+		      text-decoration: none;
+		      font-weight: bold;
+		      text-align: center;
+		    }
+		    
+		    .back {
+		      position: absolute;
+		      top: 0;
+		      left: 0;
+		      text-align: center;
+		      display: block;
+		      padding: 7px;
+		      width: 100%;
+		      box-sizing: border-box;
+		      -moz-box-sizing: border-box;
+		      -webkit-box-sizing: border-box;
+		      background: rgba(255, 255, 255, 0.25);
+		      font-weight: bold;
+		      font-size: 13px;
+		      color: #000;
+		      -webkit-transition: all 500ms ease-in-out;
+		      -moz-transition: all 500ms ease-in-out;
+		      -o-transition: all 500ms ease-in-out;
+		      transition: all 500ms ease-in-out;
+		    }
+		    .back:hover {
+		      color: black;
+		      background: rgba(255, 255, 255, 0.5);
+		    }
+		    
+		    header {
+		      position: relative;
+		      z-index: 10;
+		    }
+		    .main section .page_container {
+		      position: relative;
+		      top: 25%;
+		      margin: 0 auto 0;
+		      max-width: 950px;
+		      z-index: 3;
+		    }
+		    .main section  {
+		      overflow: hidden;
+		    }
+		    
+		    .main section.page1 {
+		      	background: url('assets/images/gallery/nemalmountain.jpg') no-repeat;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center center;
+				color: white;
+		    }
+	
+		    .main section .page_container .btns {
+		      clear: both;
+		      float: left;
+		      text-align: center;
+		      width: 435px;
+		    }
+		    .main section .page_container .btns a{
+		      text-align: center;
+		    }
+		    .main section.page2 {
+			    background: url('assets/images/gallery/mountain1.jpg') no-repeat;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center center;
+				color: white;
+		    }
+	
+		    .viewing-page-2 .back{
+		      background: rgba(0, 0, 0, 0.25);
+		      color: #FFF;
+		      }
+		    .main section.page3 {
+		      	background: url('assets/images/gallery/mountain2.jpg') no-repeat;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center center;
+				color: white;
+		    }
+		    
+		    body.disabled-onepage-scroll .onepage-wrapper  section {
+		      min-height: 100%;
+		      height: auto;
+		    }
+		    
+		    body.disabled-onepage-scroll .main section .page_container, body.disabled-onepage-scroll .main section.page3 .page_container  {
+		      padding: 20px;
+		      margin-top: 150px;
+		      -webkit-box-sizing: border-box;
+		      -moz-box-sizing: border-box;
+		      box-sizing: border-box;
+		    }
+		    
+		    body.disabled-onepage-scroll  section .page_container h1{
+		      text-align: center;
+		      font-size: 50px;
+		    }
+		    body.disabled-onepage-scroll section .page_container h2, body.disabled-onepage-scroll section .page_container .credit, body.disabled-onepage-scroll section .page_container .btns{
+		      text-align: center;
+		      width: 100%;
+		    }
+		    
+		    body.disabled-onepage-scroll .main section.page1 > img {
+		      position: absolute;
+		      width: 80%;
+		      left: 10%;
+		    }
+		    
+		    body.disabled-onepage-scroll .main section > img {
+		      position: relative;
+		      max-width: 80%;
+		      bottom: 0;
+		    }
+		    body.disabled-onepage-scroll code {
+		      width: 95%;
+		      margin: 0 auto 25px;
+		      float: none;
+		      overflow: hidden;
+		    }
+		    
+		    body.disabled-onepage-scroll .main section.page3 .page_container {
+		      width: 90%;
+		      margin-left: auto;
+		      margin-right: auto;
+		      right: 0;
+		    }
+		    
+		    .member_photo {
+			    width: 200px;
+			    height: 200px;
+		    }
+		</style>
+			
+		<script>
+			  $(document).ready(function(){
+		      $(".main").onepage_scroll({
+		        sectionContainer: "section",
+		        responsiveFallback: 600,
+		        loop: true
+		      });
+				});
+				
+		</script>
+		
+		
+	</head>
+	<body>
+		<div id="navbar" class="navbar navbar-default    navbar-collapse       h-navbar">
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left">
+					<a href="/index" class="navbar-brand">
+						<small>
+							<i class="fi-foot"></i>
+							<span class="bolder">OneStep</span>
+							<span>DonorSearch</span>
+						</small>
+					</a>
+	
+					<!--
+					<button class="pull-right navbar-toggle navbar-toggle-img collapsed" type="button" data-toggle="collapse" data-target=".navbar-buttons,.navbar-menu">
+						<span class="sr-only">Toggle user menu</span>
+	
+						<img src="assets/avatars/user.jpg" alt="Jason's Photo" />
+					</button>
+					-->
+					
+					<button class="pull-right navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#menu">
+						<span class="sr-only">Toggle sidebar</span>
+	
+						<span class="icon-bar"></span>
+	
+						<span class="icon-bar"></span>
+	
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+	
+				<div id="menu" class="navbar-buttons navbar-header pull-right  collapse navbar-collapse" role="navigation">
+					<ul class="nav ace-nav">
+						<li class="transparent">
+							<a href="/search">
+								<i class="glyphicon glyphicon-search"></i>
+								Search
+							</a>
+						</li>
+						<li class="transparent">
+							<a href="/contacts">
+								<i class="ace-icon fa fa-users"></i>
+								Contacts
+							</a>
+						</li>
+	
+						<li class="light-blue user-min">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" src="assets/avatars/user.jpg" alt="Jason's Photo" />
+								<span class="user-info">
+									<small>Welcome,</small>
+									Nitya
+								</span>
+	
+								<i class="ace-icon fa fa-caret-down"></i>
+							</a>
+	
+							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="/profile">
+										<i class="ace-icon fa fa-user"></i>
+										Profile
+									</a>
+								</li>
+	
+								<li class="divider"></li>
+	
+								<li>
+									<a href="/">
+										<i class="ace-icon fa fa-power-off"></i>
+										Logout
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+	
+			</div><!-- /.navbar-container -->
+		</div>
+		<div class="wrapper">
+		  <div class="main">
+		    
+	      <section class="page1">
+	        <div class="page_container">
+	          <h1 style="font-size: 60px">Learn more about our team member!</h1>
+	  	    </div>
+	      </section>
+		    
+		    <section class="page2">
+		      <div class="page_container">
+		          <img class="member_photo img-thumbnail" src="assets/images/gallery/member/daisy.jpg" />
+		          <h1>Ms Super Quiet</h1>
+		          <h2>Daisy Aurora</h2>
+		          <h4>Front end programmer on free time</h4>
+		      </div>
+	      </section>
+		    
+		    <section class="page3">
+		      <div class="page_container">
+		          <img class="member_photo img-thumbnail" src="assets/images/gallery/member/alice.jpg" />
+		          <h1>Mr Leecher</h1>
+		          <h2>Alice</h2>
+		          <h4>Eat free food everyday when hooman do all the work</h4>
+	  	    </div>
+	      </section>
+	    </div>
+	  </div>
+	  	<!-- basic scripts -->
+		<script src="assets/js/bootstrap.min.js"></script>
+	
+		<!-- page specific plugin scripts -->
+	
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+		</script>
+	</body>
+</html>
